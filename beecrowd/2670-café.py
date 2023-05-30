@@ -7,6 +7,7 @@
 #minutos.append(2 * A2 + 4 * A1) #no A3
 #print(min(minutos))
 
+#código generalizado para n andares
 def modulo(x): #praticando criar função
     if x > 0:
         return x
