@@ -5,5 +5,5 @@ for x in range(1, k + 1):
     contador = 0
     for i in range(len(lista)):
         if x == lista[i]:
-            contador +=1
+            contador += 1
     print(f'{x}:', '#' * contador)
