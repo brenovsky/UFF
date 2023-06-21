@@ -3,10 +3,7 @@ def inverter(x):
     for i in range(len(x)):
         if x[i] not in nova:
             nova.append(x[i])
-    nova_invertida = []
-    for i in range(len(nova) - 1, -1, -1):
-        nova_invertida.append(nova[i])
-    return nova_invertida
+    return list(reversed(nova))
 
 lista = [1, 2, 7, 2, 2, 2, 5, 6, 6, 6, 1]
 print(inverter(lista))
