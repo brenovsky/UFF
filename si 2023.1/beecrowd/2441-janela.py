@@ -5,7 +5,9 @@ janela = [0] * 600
 for i in range(len(posicao)):
     janela[posicao[i] : posicao[i] + 200] = [1] * 200
 
-print(janela.count(0) * 100)
+print((600 - sum(janela)) * 100)
+
+#print(janela.count(0) * 100)
 
 
 
