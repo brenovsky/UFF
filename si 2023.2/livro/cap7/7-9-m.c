@@ -3,24 +3,23 @@
 int main()
 {
     int a, b, c;
-    int tipo = 0;
 
     scanf("%d%d%d", &a, &b, &c);
 
     if (b == a && b == c)
     {
-        tipo = 1;
-    }
-    else if ((b == a) ^ (b == c) ^ (a == c))
-    {
-        tipo = 3;
-    }
-    else
-    {
-        tipo = 2;
+        printf("equilatero\n");
     }
 
-    printf("%d\n", tipo);
+    else if ((a == b) ^ (b == c) ^ (a == c))
+    {
+        printf("isosceles\n");
+    }
+
+    else
+    {
+        printf("escaleno\n");
+    }
 
     return 0;
 }
