@@ -7,7 +7,7 @@ int main()
 
     scanf("%d", &n);
 
-    while (n > divisor && primo)
+    while ((n / 2) >= divisor && primo)
     {
         if (n % divisor == 0)
         {
