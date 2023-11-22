@@ -26,3 +26,7 @@ int main()
 
     return 0;
 }
+
+
+//ver busca binária
+//ver merge sort
