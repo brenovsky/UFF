@@ -9,9 +9,9 @@ void hanoi(int n, char O, char T, char D)
         printf("Disco 1: %c -> %c", O, D);
     }
 
-    hanoi(n - 1, O, T, D);
-    printf("\n Disco %d: %c -> %c", O, D);
-    hanoi(n - 1, T, D, O);
+    hanoi(n - 1, O, D, T);
+    printf("\n Disco %d: %c -> %c", n, O, D);
+    hanoi(n - 1, T, O, D);
 }
 
 int main()
