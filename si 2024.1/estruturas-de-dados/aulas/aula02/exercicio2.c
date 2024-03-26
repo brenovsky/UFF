@@ -10,7 +10,7 @@ int main() {
 
     int n;
     float sum = 0;
-    float *vetor;
+    float* vetor;
     float media;
 
     scanf("%d", &n);
