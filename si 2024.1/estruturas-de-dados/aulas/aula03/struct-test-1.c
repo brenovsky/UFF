@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct ponto2d {
+typedef struct ponto2d {
     int x;
     int y;
 } TPonto;
 
 int main() {
 
-    struct ponto2d p;
+    TPonto p;
 
     scanf("%d %d", &p.x, &p.y);
 
