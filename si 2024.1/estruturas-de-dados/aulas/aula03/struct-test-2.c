@@ -2,27 +2,51 @@
 #include <stdlib.h>
 
 typedef struct lista {
+
     int info;
     struct lista* prox;
+
 } TLista;
 
-TLista* cria_lista() { //o ponteiro vai apontar pra null
-    return NULL;
+void cria_lista(TLista* lista) { //ponteiro aponta para NULL
+
+    lista -> prox = NULL;
 }
 
-TLista* insere_inicio(TLista* li, int i) { //nao entendi esses parametros
+void insereInicio(TLista* lista, int valor) {// inserir elemento no inicio da lista
 
-    TLista* novo = (TLista*) malloc(sizeof(TLista)); //criei a lista nova
+    TLista* novo = (TLista*) malloc(sizeof(TLista));
 
-    novo -> info = i; //receber a informação
-    novo -> prox = li; //li só aponta pro inicio do vetor
+    novo -> info = valor;
+    novo -> prox = lista -> prox; //novo prox, aponta para onde o ponteiro 'lista' aponta (começo da lista)
 
-    return novo;
+    lista -> prox = novo; //ponteiro do começo aponta para o novo inicio
+}
 
+void imprimirLista(TLista* lista) {
+
+    TLista* p = lista -> prox;
+
+    while (p != NULL) {
+        printf("%d ", p->info);
+
+        p = p -> prox;
+    }
 }
 
 int main() {
 
+    int input;
+    TLista vetor;
+
+    cria_lista(&vetor);
+
+    do {
+        scanf("%d", &input);
+        insereInicio(&vetor, input);
+    } while(input != 0);
+
+    imprimirLista(&vetor);
 
     return 0;
 }
