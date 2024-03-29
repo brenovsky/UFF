@@ -26,7 +26,23 @@ void inserirInicios(Lista* lista, int valor) {
 }
 
 void inserirFim(Lista* lista, int valor) {
-    
+    TNo *auxiliar,* novo = (TNo*) malloc(sizeof(TNo));
+
+    novo -> valor;
+    novo -> proximo = NULL;
+
+    auxiliar -> proximo = inicio; //me confundi
+
+    if (lista -> inicio == NULL) {
+        lista -> inicio = novo;
+    } else {
+        while(auxiliar->proximo != NULL) {
+            auxiliar = auxiliar -> proximo;
+        }
+        auxiliar -> proximo = novo;
+
+    }
+    lista -> tam++;
 }
 
 void imprimir(Lista* lista) {
@@ -47,7 +63,7 @@ int main() {
     lista.tam = 0;
 
     do {
-        printf("1 - inserir no inicio\n2 - imprimir\n3 - sair do programa\n");
+        printf("1 - inserir no inicio\n2 - imprimir\n3 - inserir no fim\n4 - sair\n");
         scanf("%d", &opcao);
 
         switch(opcao) {
@@ -59,6 +75,9 @@ int main() {
                 imprimir(&lista);
                 break;
             case 3:
+                inserirFim(&lista, valor);
+                break;
+            case 4:
                 printf("Finalizando...\n");
                 break;
             default:
