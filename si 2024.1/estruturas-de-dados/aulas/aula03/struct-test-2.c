@@ -65,7 +65,7 @@ void excluirElemento(TLista* lista, int valor) {//exclui a primeira ocorrencia
             a = a -> prox;
         }
         a -> prox = p -> prox; //substitui o ponteiro do anterior
-        free(p);
+        free(p); //liberar o struct que 'p' aponta
     }
     imprimirLista(lista);
 }
